@@ -1,0 +1,13 @@
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    
+    body h2 {
+        font-size: 30px;
+        line-height: 42px;
+        padding-bottom: 30px;
+    }
+    .wp-block-columns.tablet-single-column {
+        width: 100%;
+        display: block;
+        padding-top: 30px;
+    }
+}

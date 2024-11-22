@@ -1,0 +1,52 @@
+
+.css-slider-wrapper {
+    overflow: hidden;
+    width: 100vw; /* Adjust the width as needed */
+    padding: 1rem 0 0;
+}
+
+.css-slider-wrapper .item-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap; /* Ensures all list items are displayed in a single line */
+    animation: scrollImages 20s linear infinite; 
+}
+
+.css-slider-wrapper .item-list .item {
+    display: inline-block;
+}
+
+@keyframes scrollImages {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.global-brands-desktop {
+    display: none;
+}
+.global-brands-mobile {
+    display: flex;
+}
+
+.css-slider-wrapper .item-list {
+    animation: scrollImages 20s linear infinite; 
+}
+
+@media screen and (min-width: 1024px) and (min-height: 768px) {
+
+    .css-slider-wrapper .item-list {
+        animation: scrollImages 60s linear infinite; 
+    }
+
+    .global-brands-desktop {
+        display: block;
+    }
+    .global-brands-mobile {
+        display: none;
+    }
+}

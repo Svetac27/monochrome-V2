@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="17.5" viewBox="0 0 15 17.5">
+  <!-- Line below -->
+  <path d="M-6.875,1.25H-7.5V0h15V1.25H-6.875Z" transform="translate(7.5 16.25)" fill="currentColor"/>
+  
+  <!-- Arrow pointing down -->
+  <path d="M.441-2.684,0-2.242l-.441-.441-5-5-.441-.441L-5-9.008l.441.441L-.625-4.633V-16.25H.625V-4.633L4.559-8.566,5-9.008l.883.883-.441.441-5,5Z" transform="translate(7.5 16.25)" fill="currentColor"/>
+</svg>

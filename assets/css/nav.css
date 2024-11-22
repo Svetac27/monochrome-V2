@@ -1,0 +1,373 @@
+nav ul.nav-menu, #menu-footer-menu {
+	@apply flex gap-4;
+	letter-spacing: 1.4px;
+}
+.left-menu #menu-footer-menu a {
+    letter-spacing: normal;
+}
+
+.entry-content a:before, .slider-v2 a:before {
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+
+}
+
+.entry-content a:hover:before, .slider-v2 a:hover:before {
+	right: 3px!important;
+}
+
+@media screen and (max-width: 767px) {
+
+	footer #menu-footer-menu li a{
+		@apply text-14px font-gilroy
+	}
+	 #menu-footer-menu, footer .left-menu, footer .left-menu > div {
+	 	width: 100%;
+	}
+
+	footer .left-menu ul, footer .right-menu {
+		width: 100%;
+	}
+	footer .site-info  {
+		@apply flex flex-wrap;
+		row-gap: 30px;
+	}
+}
+
+.nav-menu li {
+    position: relative;
+}
+.nav-menu li:hover .sub-menu,
+    .nav-menu li.focus .sub-menu {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.nav-menu li .sub-menu {
+    padding: 0;
+	z-index: -1;
+    display: block;
+    opacity: 0;
+    height: 0;
+
+
+    position: absolute;
+    top: 90%;
+    left: 0;
+    border-radius: 20px;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+}
+
+.platform-options .sub-menu {
+	z-index: -1;
+    border-radius: 20px;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    position: relative;
+}
+
+.nav-menu li .sub-menu:before,
+.platform-options .sub-menu:before {
+	content: " ";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+    background-color: rgba(255, 255,255, 0.5);
+    border-radius: 20px;
+}
+
+/* used to fix hover */
+
+.nav-menu li .sub-menu:after,
+.platform-options .sub-menu:after {
+	content: " ";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: -10px;
+	left: 0;
+    z-index: -1;
+}
+
+.platform-options .sub-menu:before {
+    top: 0;
+    z-index: -1;
+    height: 100%;
+}
+    
+.nav-menu li .sub-menu li,
+.platform-options .sub-menu li {
+    padding-left:12px;
+    padding-right:12px;
+}
+.nav-menu li .sub-menu li a,
+.platform-options .sub-menu li div  {
+    padding: 12px 12px;
+    white-space: nowrap;
+    display: block;
+    font-family: Gilroy-Regular;
+    text-transform: none;
+    letter-spacing: 0;
+    overflow: hidden;
+}
+.nav-menu li .sub-menu li:hover,
+.platform-options .sub-menu li:hover  {
+    background-color: rgba(44,96,106,.07);
+    /* text-decoration: underline; */
+}
+.nav-menu li:hover .sub-menu,
+    .nav-menu li.focus .sub-menu {
+    z-index: 40;
+    opacity: 1;
+    top: calc(100% + 10px);
+}
+
+.desktop-menu > div,
+.desktop-menu > div > ul.nav-menu {
+    height: 100%;
+    align-items: center;
+}
+
+
+.desktop-menu > div > ul.nav-menu {
+    @apply gap-6px;
+}
+.desktop-menu > div > ul.nav-menu > li > a {
+    padding: 1rem 18px;
+    position: relative;
+    display: block;
+}
+
+.desktop-menu > div > ul.nav-menu > li.menu-item-has-children > a {
+    padding-right: 40px;
+}
+.desktop-menu > div > ul.nav-menu > li.menu-item-has-children > a:before {
+
+  content: " ";
+  height: 10px;
+  width: 12px;
+  background: url(assets/icons/chevron-down.svg) no-repeat center;
+  background-size: contain;
+
+
+    position: absolute;
+    /*font-size: 6px;
+    font-weight: normal;
+	content: "\e912";
+	font-family: icon;*/
+	right: 22px;
+	top: 50%;
+	transform: translateY(-50%);
+
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.desktop-menu > div > ul.nav-menu > li > a {
+    border-radius: 30px;
+
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+}
+.desktop-menu > div > ul.nav-menu > li:hover > a,
+.desktop-menu > div > ul.nav-menu > li.focus > a {
+    background-color: rgba(44, 96, 106, .07);
+    position: relative;
+    overflow: hidden;
+}
+.desktop-menu > div > ul.nav-menu > li:hover > a:after,
+.desktop-menu > div > ul.nav-menu > li.focus > a:after {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.desktop-menu > div > ul.nav-menu > li:hover > a:before,
+.desktop-menu > div > ul.nav-menu > li.focus > a:before {
+    transform: scaleY(-1) translateY(50%);
+}
+.desktop-menu > div > ul.nav-menu > li:hover ul.sub-menu,
+.desktop-menu > div > ul.nav-menu > li.focus ul.sub-menu {
+    padding: 16px 0;
+    display: inline-table;
+    height: auto;
+    min-width: 180px;
+}
+
+.desktop-menu .menu-item {
+    overflow: hidden;
+}
+.desktop-menu .menu-item:hover,
+.desktop-menu .menu-item.focus {
+    overflow: visible;
+}
+
+.navbar-gradient-bg {
+	z-index: -1;
+	transform: matrix(-1, 0, 0, -1, 0, 0);
+	background: transparent linear-gradient(0deg, #D9E8E8 0%, #D9E8E800 100%) 0% 0% no-repeat padding-box;
+}
+
+
+
+nav button {
+    position: relative;
+    z-index: 50;
+}
+
+
+nav .icon-close {
+    display: none;
+}
+
+nav.open .icon-close {
+    display: block;
+}
+nav.open .icon-menu {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .nav-items.mobile-menu .contact-us {
+      display: none;
+    }
+}
+
+nav .nav-items.mobile-menu ul#mobile-menu > li{
+    position: relative;
+}
+
+nav .nav-items.mobile-menu ul#mobile-menu > li > a {
+	letter-spacing: 100;
+}
+
+nav .nav-items.mobile-menu ul#mobile-menu > li.menu-item-has-children > a:before {
+  font-family: 'icon' !important;
+  content: "\e912";
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 8px;
+  font-weight: normal;
+  right: 18px !important;
+}
+
+nav .nav-items.mobile-menu ul#mobile-menu > li .sub-menu{ 
+    height: auto;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    max-height: 0px;
+}
+nav .nav-items.mobile-menu ul#mobile-menu > li.opened .sub-menu{
+    max-height: 500px;
+}
+
+
+nav .nav-items.mobile-menu {
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+}
+nav.open .nav-items.mobile-menu {
+    z-index: 40;
+    opacity: 1;
+}
+
+@media screen and (max-width: 1023px) {
+    .nav-items.mobile-menu {
+        padding-top: 70px;
+        background: #F1F6F6 0% 0% no-repeat padding-box;
+        position: fixed;
+        width: 0;
+        height: 0;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        display: block;
+    }
+
+    nav.open .nav-items.mobile-menu {
+        width: 100vw;
+        height: 100vh;
+    }
+    nav .nav-items.mobile-menu ul{
+        display: grid;
+        gap: 0;
+    }
+    nav .nav-items.mobile-menu ul#mobile-menu > li{
+        display: grid;
+    }
+    nav .nav-items.mobile-menu ul#mobile-menu > li > a{
+        padding: 22px 30px;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        width: 100%;
+    }
+    nav .nav-items.mobile-menu ul#mobile-menu > li > ul > li > a{
+        padding: 12px 30px;
+        font-size: 18px;
+        display: block;
+    }
+
+    nav .nav-items.mobile-menu ul#mobile-menu > li.menu-item-has-children > a {
+        position: relative;
+        padding-right: 1.5rem;
+    }
+
+}
+
+.left-menu #menu-footer-menu {
+	gap: 40px;
+}
+.left-menu #menu-footer-menu a {
+	@apply text-14px font-gilroy;
+}
+.left-menu #menu-footer-menu a:hover {
+    text-decoration: underline;
+}
+
+nav .nav-items.mobile-menu ul#mobile-menu>li>a {
+    letter-spacing: 0.1em;
+    @apply font-gilroy text-16px leading-[1];
+}
+nav .nav-items.mobile-menu ul#mobile-menu>li>ul>li>a {
+    @apply font-gilroy text-16px leading-[1];
+    letter-spacing: 0px;
+    padding: 10px 30px 20px 30px;
+}
+
+nav .nav-items.mobile-menu ul#mobile-menu>li>a:before {
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+
+nav .nav-items.mobile-menu ul#mobile-menu > li.menu-item-has-children.opened > a:before {
+    transform: scaleY(-1) translateY(50%);
+}
+
+
+#site-navigation .icon-close {
+    height: 12px;
+    width: 12px;
+}
+
+.main-navigation.open > .show-contact-modal {
+    display: none;
+}

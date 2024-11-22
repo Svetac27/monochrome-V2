@@ -1,0 +1,1 @@
+<?php echo file_get_contents(get_template_directory() . '/assets/icons/check-2.svg');
